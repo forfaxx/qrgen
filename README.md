@@ -3,6 +3,7 @@
 Generate QR codes instantly from the terminal.
 No accounts. No ads. No browser required.
 
+![adminjitsu article](adminjitsu.png)
 
 ### 🔧 Features
 
