@@ -3,12 +3,12 @@
 Generate QR codes instantly from the terminal.
 No accounts. No ads. No browser required.
 
-[![adminjitsu article](adminjitsu.png)](https://adminjitsu.com/qrgen)
 
 ### 🔧 Features
 
 * Accepts direct text or piped input
-* Saves PNG images (`--output`)
+* Saves images in PNG, JPG, or GIF format (based on --output file extension)
+* Output to a directory? Defaults to output.png inside that folder
 * Prints QR code as ASCII (`--ascii`)
 * Interactive prompt fallback if no input is given
 * Share Wi-Fi passwords, OTP secrets, URLs, or any text as a QR code—right from your shell
@@ -96,6 +96,15 @@ echo "my wifi password" | qrgen --ascii
 
 # Pipe text into it and save to file
 echo "ssh grumble@bomb20.darkstar.home" | ./qrgen.py --output ssh.png
+
+# Save as PNG
+./qrgen.py "https://darkstar.home" --output darkstar.png
+
+# Save as high-quality JPEG (web-optimized)
+./qrgen.py "https://darkstar.home" --output darkstar.jpg
+
+# Save to a directory (outputs 'output.png' in dir)
+./qrgen.py "https://darkstar.home" --output /tmp/
 
 # Show ASCII art version in terminal
 ./qrgen.py --ascii "Hello from the shell"
