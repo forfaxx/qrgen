@@ -19,7 +19,7 @@ def generate_qr(data, output=None, show_ascii=False):
     qr = qrcode.QRCode(
         version=None,
         error_correction=qrcode.constants.ERROR_CORRECT_Q,
-        box_size=2,
+        box_size=6,
         border=1,
     )
     qr.add_data(data)
